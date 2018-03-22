@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+  <description><![CDATA["jpasiabpm core tag library"]]></description>
+  <display-name>"jpasiabpm core tag library"</display-name>
+  <tlib-version>2.2</tlib-version>
+  <short-name>jpasiabpm</short-name>
+  <uri>/jpasiabpm-core</uri>
+	
+	<tag>
+		<description>Loads and returns the list of the Asiabpms available in the system.</description>
+		<name>asiabpms</name>
+		<tag-class>org.entando.entando.plugins.jpasiabpm.aps.tags.AsiabpmListTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<description>The name of the variable setted in the pagecontext.</description>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<description>Loads and returns an Asiabpm given a key.</description>
+		<name>asiabpm</name>
+		<tag-class>org.entando.entando.plugins.jpasiabpm.aps.tags.AsiabpmTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<description>Identifier of the Asiabpm to load</description>
+			<name>key</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<description>The name of the variable setted in the pagecontext.</description>
+			<name>var</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+</taglib>

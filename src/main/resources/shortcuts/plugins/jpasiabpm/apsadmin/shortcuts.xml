@@ -1,0 +1,15 @@
+<shortcut-def>
+	<shortcuts>
+		<shortcut id="jpasiabpm.Asiabpm.shortCut" requiredPermission="superuser" menusection="plugins" source="jpasiabpm">
+			<description key="jpasiabpm.Asiabpm.shortCut.list.shortDesc">Asiabpm list</description>
+			<longdesc key="jpasiabpm.Asiabpm.shortCut.list.longDesc">
+				<![CDATA[Asiabpm shortCut longDesc ]]>
+			</longdesc>
+			<url>
+				<param name="namespace">/do/jpasiabpm/Asiabpm</param>
+				<param name="actionName">list</param>
+			</url>
+		</shortcut>
+	</shortcuts>
+	
+</shortcut-def>

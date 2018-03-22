@@ -1,0 +1,105 @@
+****************************************************************
+
+						Edo Report		
+								
+****************************************************************
+
+=== Command Line
+
+[Asiabpm, afield:string-r30]
+
+
+
+=== List of geneated files that MUST be merged:
+----------------------------------------------------------------
+Total files: 0
+Total lines: 0
+
+
+=== List of geneated files:
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\internalservlet\asiabpm\AsiabpmFinderFrontEndAction.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\internalservlet\asiabpm\AsiabpmFrontEndAction.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\internalservlet\asiabpm\asiabpmFront.xml
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\init\servdb\Asiabpm.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\asiabpm\Asiabpm.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\asiabpm\AsiabpmDAO.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\asiabpm\AsiabpmManager.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\asiabpm\IAsiabpmDAO.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\asiabpm\IAsiabpmManager.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\asiabpm\api\AsiabpmListResponse.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\asiabpm\api\AsiabpmListResponseResult.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\asiabpm\api\AsiabpmResponse.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\asiabpm\api\AsiabpmResponseResult.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\asiabpm\api\JAXBAsiabpm.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\asiabpm\event\AsiabpmChangedEvent.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\asiabpm\event\AsiabpmChangedObserver.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\tags\AsiabpmListTag.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\aps\tags\AsiabpmTag.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\apsadmin\asiabpm\AsiabpmAction-validation.xml
+src\main\java\org\entando\entando\plugins\jpasiabpm\apsadmin\asiabpm\AsiabpmAction.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\apsadmin\asiabpm\AsiabpmFinderAction.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\apsadmin\asiabpm\asiabpm.xml
+src\main\java\org\entando\entando\plugins\jpasiabpm\apsadmin\asiabpm\package_en.properties
+src\main\java\org\entando\entando\plugins\jpasiabpm\apsadmin\asiabpm\package_it.properties
+src\main\java\org\entando\entando\plugins\jpasiabpm\apsadmin\global-messages_en.properties
+src\main\java\org\entando\entando\plugins\jpasiabpm\apsadmin\global-messages_it.properties
+src\main\java\org\entando\entando\plugins\jpasiabpm\apsadmin\portal\specialwidget\asiabpm\AsiabpmConfigAction.java
+src\main\java\org\entando\entando\plugins\jpasiabpm\apsadmin\portal\specialwidget\asiabpm\asiabpmSpecialWidget.xml
+src\main\java\org\entando\entando\plugins\jpasiabpm\apsadmin\portal\specialwidget\asiabpm\package_en.properties
+src\main\java\org\entando\entando\plugins\jpasiabpm\apsadmin\portal\specialwidget\asiabpm\package_it.properties
+src\main\resources\api\plugins\jpasiabpm\aps\apiMethods.xml
+src\main\resources\component\plugins\jpasiabpm\component.xml
+src\main\resources\entando-struts-plugin.xml
+src\main\resources\shortcuts\plugins\jpasiabpm\apsadmin\shortcuts.xml
+src\main\resources\spring\plugins\jpasiabpm\aps\managers\jpasiabpmAsiabpmManagersConfig.xml
+src\main\resources\spring\plugins\jpasiabpm\apsadmin\jpasiabpmAsiabpmActionsConfig.xml
+src\main\resources\sql\plugins\jpasiabpm\port_data_production.sql
+src\main\resources\sql\plugins\jpasiabpm\serv_data_production.sql
+src\main\tld\plugins\jpasiabpm\jpasiabpm-core.tld
+src\main\webapp\WEB-INF\plugins\jpasiabpm\aps\jsp\internalservlet\asiabpm\frontend-asiabpm-entry.jsp
+src\main\webapp\WEB-INF\plugins\jpasiabpm\aps\jsp\internalservlet\asiabpm\frontend-asiabpm-error.jsp
+src\main\webapp\WEB-INF\plugins\jpasiabpm\aps\jsp\internalservlet\asiabpm\frontend-asiabpm-list.jsp
+src\main\webapp\WEB-INF\plugins\jpasiabpm\aps\jsp\internalservlet\asiabpm\frontend-asiabpm-trash.jsp
+src\main\webapp\WEB-INF\plugins\jpasiabpm\aps\jsp\widgets\jpasiabpmAsiabpm.jsp
+src\main\webapp\WEB-INF\plugins\jpasiabpm\apsadmin\jpasiabpm-tiles.xml
+src\main\webapp\WEB-INF\plugins\jpasiabpm\apsadmin\jsp\asiabpm\asiabpm-entry.jsp
+src\main\webapp\WEB-INF\plugins\jpasiabpm\apsadmin\jsp\asiabpm\asiabpm-list.jsp
+src\main\webapp\WEB-INF\plugins\jpasiabpm\apsadmin\jsp\asiabpm\asiabpm-trash.jsp
+src\main\webapp\WEB-INF\plugins\jpasiabpm\apsadmin\jsp\common\layouts\assets-more\asiabpm-entry-extras.jsp
+src\main\webapp\WEB-INF\plugins\jpasiabpm\apsadmin\jsp\common\layouts\assets-more\asiabpm-list-extras.jsp
+src\main\webapp\WEB-INF\plugins\jpasiabpm\apsadmin\jsp\common\layouts\assets-more\asiabpm-trash-extras.jsp
+src\main\webapp\WEB-INF\plugins\jpasiabpm\apsadmin\jsp\common\layouts\subMenu.jsp
+src\main\webapp\WEB-INF\plugins\jpasiabpm\apsadmin\jsp\portal\specialwidget\asiabpm\asiabpm-config.jsp
+src\test\java\org\entando\entando\plugins\jpasiabpm\JpasiabpmConfigTestUtils.java
+src\test\java\org\entando\entando\plugins\jpasiabpm\aps\JpasiabpmBaseTestCase.java
+src\test\java\org\entando\entando\plugins\jpasiabpm\aps\system\services\TestAsiabpmManager.java
+src\test\java\org\entando\entando\plugins\jpasiabpm\apsadmin\JpasiabpmApsAdminBaseTestCase.java
+src\test\java\org\entando\entando\plugins\jpasiabpm\apsadmin\asiabpm\TestAsiabpmAction.java
+src\test\java\org\entando\entando\plugins\jpasiabpm\apsadmin\asiabpm\TestAsiabpmFinderAction.java
+src\test\resources\sql\plugins\jpasiabpm\port_data_test.sql
+src\test\resources\sql\plugins\jpasiabpm\serv_data_test.sql
+----------------------------------------------------------------
+Total files: 61
+Total lines: 3015
+
+
+
+
+
+=== Revert *port inserts
+
+DELETE FROM localstrings where keycode = 'jpasiabpm_ASIABPM_ID'; 
+DELETE FROM localstrings where keycode = 'jpasiabpm_ASIABPM_AFIELD'; 
+DELETE FROM localstrings where keycode = 'jpasiabpm_ASIABPM_ACTIONS'; 
+DELETE FROM localstrings where keycode = 'jpasiabpm_ASIABPM_NEW'; 
+DELETE FROM localstrings where keycode = 'jpasiabpm_ASIABPM_EDIT'; 
+DELETE FROM localstrings where keycode = 'jpasiabpm_ASIABPM_TRASH'; 
+DELETE FROM localstrings where keycode = 'jpasiabpm_ASIABPM_TRASH_CONFIRM'; 
+DELETE FROM localstrings where keycode = 'jpasiabpm_ASIABPM_SEARCH_ASIABPM'; 
+
+
+DELETE FROM widgetcatalog where code = 'jpasiabpmAsiabpm_list_form';
+DELETE FROM widgetcatalog where code = 'jpasiabpmAsiabpm';
+
+
+

@@ -1,0 +1,51 @@
+<apiMethodDefinitions>
+
+	<resource name="asiabpms">
+        <description>Return the asiabpm list</description>
+        <source pluginCode="jpasiabpm">plugins</source>
+		<method httpMethod="GET" active="true" canSpawnOthers="true">
+			<description>Return the asiabpms list</description>
+			<springBean name="jpasiabpmAsiabpmManager" method="getAsiabpmsForApi" />
+			<responseClass>org.entando.entando.plugins.jpasiabpm.aps.system.services.asiabpm.api.AsiabpmListResponse</responseClass>
+			<!-- 
+			<parameters>
+			</parameters>
+			-->
+		</method>
+	</resource>
+  
+    <resource name="asiabpm">
+        <description>The asiabpm</description>
+        <source pluginCode="jpasiabpm">plugins</source>
+        <method httpMethod="GET" active="true" canSpawnOthers="true">
+            <description>Return a asiabpm by id</description>
+            <springBean name="jpasiabpmAsiabpmManager" method="getAsiabpmForApi" />
+            <responseClass>org.entando.entando.plugins.jpasiabpm.aps.system.services.asiabpm.api.AsiabpmResponse</responseClass>
+            <parameters>
+                <parameter key="id" required="true">
+                    <description>The id of the asiabpm to return</description>
+                </parameter>
+            </parameters>
+        </method>
+        <method httpMethod="POST" active="true" requiredAuth="true" requiredPermission="superuser">
+            <description>Add a asiabpm</description>
+            <springBean name="jpasiabpmAsiabpmManager" method="addAsiabpmForApi" />
+            <expectedType>org.entando.entando.plugins.jpasiabpm.aps.system.services.asiabpm.api.JAXBAsiabpm</expectedType>
+        </method>
+        <method httpMethod="PUT" active="true" requiredAuth="true" requiredPermission="superuser">
+            <description>Update a asiabpm</description>
+            <springBean name="jpasiabpmAsiabpmManager" method="updateAsiabpmForApi" />
+            <expectedType>org.entando.entando.plugins.jpasiabpm.aps.system.services.asiabpm.api.JAXBAsiabpm</expectedType>
+        </method>
+        <method httpMethod="DELETE" active="true" requiredAuth="true" requiredPermission="superuser">
+            <description>Delete a asiabpm by id</description>
+            <springBean name="jpasiabpmAsiabpmManager" method="deleteAsiabpmForApi" />
+            <parameters>
+                <parameter key="id" required="true">
+                    <description>The id of the asiabpm to delete</description>
+                </parameter>
+            </parameters>
+        </method>
+    </resource>
+	
+</apiMethodDefinitions>

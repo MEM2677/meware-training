@@ -1,0 +1,7 @@
+<project name="meware" default="WAR-build" basedir=".">
+	<description>meware - Build file</description>
+
+	<import file="buildProperties.xml"/>
+	<import file="buildTasks.xml"/>
+
+</project>

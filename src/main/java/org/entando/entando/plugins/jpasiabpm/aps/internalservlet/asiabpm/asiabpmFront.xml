@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="jpasiabpm_do/FrontEnd/jpasiabpm/Asiabpm" namespace="/do/FrontEnd/jpasiabpm/Asiabpm" extends="entando-front-default">
+		
+        <global-results>
+            <result name="failure" type="guiFragment">
+                <param name="code">jpasiabpm_is_front_Asiabpm_error</param>
+                <param name="jspLocation">/WEB-INF/plugins/jpasiabpm/aps/jsp/internalservlet/asiabpm/frontend-asiabpm-error.jsp</param>
+            </result>
+        </global-results>
+		
+        <action name="list" class="jpasiabpmAsiabpmFinderFrontEndAction">
+            <result type="guiFragment">
+                <param name="code">jpasiabpm_is_front_Asiabpm_list</param>
+                <param name="jspLocation">/WEB-INF/plugins/jpasiabpm/aps/jsp/internalservlet/asiabpm/frontend-asiabpm-list.jsp</param>
+            </result>
+            <interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+        
+        <action name="search" class="jpasiabpmAsiabpmFinderFrontEndAction">
+            <result type="guiFragment">
+                <param name="code">jpasiabpm_is_front_Asiabpm_list</param>
+                <param name="jspLocation">/WEB-INF/plugins/jpasiabpm/aps/jsp/internalservlet/asiabpm/frontend-asiabpm-list.jsp</param>
+            </result>
+            <interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+    	
+        <action name="new" class="jpasiabpmAsiabpmFrontEndAction" method="newAsiabpm">
+            <result type="guiFragment">
+                <param name="code">jpasiabpm_is_front_Asiabpm_entry</param>
+                <param name="jspLocation">/WEB-INF/plugins/jpasiabpm/aps/jsp/internalservlet/asiabpm/frontend-asiabpm-entry.jsp</param>
+            </result>
+            <interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+    	
+        <action name="edit" class="jpasiabpmAsiabpmFrontEndAction" method="edit">
+            <result type="guiFragment">
+                <param name="code">jpasiabpm_is_front_Asiabpm_entry</param>
+                <param name="jspLocation">/WEB-INF/plugins/jpasiabpm/aps/jsp/internalservlet/asiabpm/frontend-asiabpm-entry.jsp</param>
+            </result>
+            <result name="input" type="frontRedirectAction">
+                <param name="actionName">list</param>
+            </result>
+            <interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+        
+        <action name="save" class="jpasiabpmAsiabpmFrontEndAction" method="save">
+            <result name="input" type="guiFragment">
+                <param name="code">jpasiabpm_is_front_Asiabpm_entry</param>
+                <param name="jspLocation">/WEB-INF/plugins/jpasiabpm/aps/jsp/internalservlet/asiabpm/frontend-asiabpm-entry.jsp</param>
+            </result>
+            <result type="frontRedirectAction">
+                <param name="actionName">list</param>
+            </result>
+            <interceptor-ref name="entandoFrontEndFreeValidationStack"></interceptor-ref>
+        </action>
+		
+        <action name="trash" class="jpasiabpmAsiabpmFrontEndAction" method="trash">
+            <result type="guiFragment">
+                <param name="code">jpasiabpm_is_front_Asiabpm_trash</param>
+                <param name="jspLocation">/WEB-INF/plugins/jpasiabpm/aps/jsp/internalservlet/asiabpm/frontend-asiabpm-trash.jsp</param>
+            </result>
+            <result name="input" type="frontRedirectAction">
+                <param name="actionName">list</param>
+            </result>
+            <interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+        
+        <action name="delete" class="jpasiabpmAsiabpmFrontEndAction" method="delete">
+            <result type="frontRedirectAction">
+                <param name="actionName">list</param>
+            </result>
+            <interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+        
+        
+        <action name="fileUpload" class="jpasiabpmAsiabpmFrontEndAction" method="fileUpload">
+            <result type="frontRedirectAction">
+                <param name="actionName">list</param>
+            </result>
+            <interceptor-ref name="apsFileUpload" />
+            <interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+    	
+    </package>
+   
+</struts>

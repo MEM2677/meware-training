@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+    <definition extends="layout.default" name="jpasiabpm.admin.Asiabpm.list">
+		<put-attribute name="title" value="jpasiabpm.title.asiabpmManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jpasiabpm/apsadmin/jsp/asiabpm/asiabpm-list.jsp" />
+		<put-attribute name="extraResources" value="/WEB-INF/plugins/jpasiabpm/apsadmin/jsp/common/layouts/assets-more/asiabpm-list-extras.jsp"/>
+	</definition>
+    <definition extends="layout.default" name="jpasiabpm.admin.Asiabpm.entry">
+		<put-attribute name="title" value="jpasiabpm.title.asiabpmManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jpasiabpm/apsadmin/jsp/asiabpm/asiabpm-entry.jsp" />
+		<put-attribute name="extraResources" value="/WEB-INF/plugins/jpasiabpm/apsadmin/jsp/common/layouts/assets-more/asiabpm-entry-extras.jsp"/>
+	</definition>
+    <definition extends="layout.default" name="jpasiabpm.admin.Asiabpm.trash">
+		<put-attribute name="title" value="jpasiabpm.title.asiabpmManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jpasiabpm/apsadmin/jsp/asiabpm/asiabpm-trash.jsp" />
+		<put-attribute name="extraResources" value="/WEB-INF/plugins/jpasiabpm/apsadmin/jsp/common/layouts/assets-more/asiabpm-trash-extras.jsp"/>
+	</definition>
+
+    <definition extends="layout.default" name="jpasiabpm.admin.page.widget.Asiabpm.entry">
+		<put-attribute name="title" value="jpasiabpm.title.asiabpmManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jpasiabpm/apsadmin/jsp/portal/specialwidget/asiabpm/asiabpm-config.jsp" />
+	</definition>
+
+</tiles-definitions>
+
+
