@@ -36,7 +36,7 @@ public class AsiabpmManager extends AbstractService implements IAsiabpmManager {
 	public Asiabpm getAsiabpm(int id) throws ApsSystemException {
 		Asiabpm asiabpm = null;
 		try {
-			asiabpm = this.getAsiabpmDAO().loadAsiabpm(id);
+			
 		} catch (Throwable t) {
 			_logger.error("Error loading asiabpm with id '{}'", id,  t);
 			throw new ApsSystemException("Error loading asiabpm with id: " + id, t);
@@ -48,7 +48,7 @@ public class AsiabpmManager extends AbstractService implements IAsiabpmManager {
 	public List<Integer> getAsiabpms() throws ApsSystemException {
 		List<Integer> asiabpms = new ArrayList<Integer>();
 		try {
-			asiabpms = this.getAsiabpmDAO().loadAsiabpms();
+			
 		} catch (Throwable t) {
 			_logger.error("Error loading Asiabpm list",  t);
 			throw new ApsSystemException("Error loading Asiabpm ", t);
@@ -60,7 +60,7 @@ public class AsiabpmManager extends AbstractService implements IAsiabpmManager {
 	public List<Integer> searchAsiabpms(FieldSearchFilter filters[]) throws ApsSystemException {
 		List<Integer> asiabpms = new ArrayList<Integer>();
 		try {
-			asiabpms = this.getAsiabpmDAO().searchAsiabpms(filters);
+			
 		} catch (Throwable t) {
 			_logger.error("Error searching Asiabpms", t);
 			throw new ApsSystemException("Error searching Asiabpms", t);
@@ -71,9 +71,7 @@ public class AsiabpmManager extends AbstractService implements IAsiabpmManager {
 	@Override
 	public void addAsiabpm(Asiabpm asiabpm) throws ApsSystemException {
 		try {
-			int key = this.getKeyGeneratorManager().getUniqueKeyCurrentValue();
-			asiabpm.setId(key);
-			this.getAsiabpmDAO().insertAsiabpm(asiabpm);
+			
 			this.notifyAsiabpmChangedEvent(asiabpm, AsiabpmChangedEvent.INSERT_OPERATION_CODE);
 		} catch (Throwable t) {
 			_logger.error("Error adding Asiabpm", t);
@@ -84,7 +82,7 @@ public class AsiabpmManager extends AbstractService implements IAsiabpmManager {
 	@Override
 	public void updateAsiabpm(Asiabpm asiabpm) throws ApsSystemException {
 		try {
-			this.getAsiabpmDAO().updateAsiabpm(asiabpm);
+			
 			this.notifyAsiabpmChangedEvent(asiabpm, AsiabpmChangedEvent.UPDATE_OPERATION_CODE);
 		} catch (Throwable t) {
 			_logger.error("Error updating Asiabpm", t);
@@ -96,7 +94,7 @@ public class AsiabpmManager extends AbstractService implements IAsiabpmManager {
 	public void deleteAsiabpm(int id) throws ApsSystemException {
 		try {
 			Asiabpm asiabpm = this.getAsiabpm(id);
-			this.getAsiabpmDAO().removeAsiabpm(id);
+			
 			this.notifyAsiabpmChangedEvent(asiabpm, AsiabpmChangedEvent.REMOVE_OPERATION_CODE);
 		} catch (Throwable t) {
 			_logger.error("Error deleting Asiabpm with id {}", id, t);
@@ -201,22 +199,5 @@ public class AsiabpmManager extends AbstractService implements IAsiabpmManager {
 		event.setOperationCode(operationCode);
 		this.notifyEvent(event);
 	}
-
-
-	protected IKeyGeneratorManager getKeyGeneratorManager() {
-		return _keyGeneratorManager;
-	}
-	public void setKeyGeneratorManager(IKeyGeneratorManager keyGeneratorManager) {
-		this._keyGeneratorManager = keyGeneratorManager;
-	}
-
-	public void setAsiabpmDAO(IAsiabpmDAO asiabpmDAO) {
-		 this._asiabpmDAO = asiabpmDAO;
-	}
-	protected IAsiabpmDAO getAsiabpmDAO() {
-		return _asiabpmDAO;
-	}
-
-	private IKeyGeneratorManager _keyGeneratorManager;
-	private IAsiabpmDAO _asiabpmDAO;
+        
 }

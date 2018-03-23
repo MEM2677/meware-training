@@ -81,12 +81,28 @@
         
         <action name="fileUpload" class="jpasiabpmAsiabpmFrontEndAction" method="fileUpload">
             <result type="frontRedirectAction">
-                <param name="actionName">list</param>
+                <param name="actionName">showOptions</param>
             </result>
             <interceptor-ref name="apsFileUpload" />
             <interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
         </action>
     	
+        <action name="showOptions" class="jpasiabpmAsiabpmFrontEndAction" method="showOptions">
+            <result type="guiFragment">
+                <param name="code">jpasiabpm_is_front_choose_list</param>
+                <param name="jspLocation">/WEB-INF/plugins/jpasiabpm/aps/jsp/internalservlet/asiabpm/frontend-asiasbpm-choose.jsp</param>
+            </result>
+            <interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+        
+        <action name="choose" class="jpasiabpmAsiabpmFrontEndAction" method="choose">
+            <result type="guiFragment">
+                <param name="code">jpasiabpm_is_front_select</param>
+                <param name="jspLocation">/WEB-INF/plugins/jpasiabpm/aps/jsp/internalservlet/asiabpm/frontend-asiasbpm-result.jsp</param>
+            </result>
+            <interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+        
     </package>
    
 </struts>
